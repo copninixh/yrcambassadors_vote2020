@@ -25,14 +25,9 @@ body{
                 <div class="col-xl-12 bg-white py-4 mb-5" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);border-radius: 5px;">
                     <div class="container">
                         <h3 class="text-rose"><i class="fas fa-chart-bar"></i> YRC Ambassadors 2020 </h3>
-                        <h4 class="text-primary">รายงานผลการเลือกตั้งประธานคณะสี ปีการศึกษา 2563</h4>
-                        <?php 
-                            if(!$_SESSION['s_id']){
-                                echo '<a href="index.php" class="btn btn-primary btn-sm w-50">กลับหน้าหลัก</a>';
-                            }else{
-                                echo '<a href="vote_yrcambassador.php" class="btn btn-primary btn-sm w-50">กลับหน้าหลัก</a>';
-                            }
-                        ?>
+                        <h4 class="text-primary">รายงานผลการเลือกโหวตเลือกทูตกิจกรรมฯ</h4>
+                        <a href="index.php" class="btn btn-primary btn-sm w-50">กลับหน้าหลัก</a>
+
                         <hr>
 
                         <div class="bg-rose text-light text-center mt-3" style="padding: 5px;background-color:#e91e63">

@@ -44,7 +44,7 @@ body{
                         <div class="bg-rose text-light text-center mt-3 mb-3" style="padding: 5px;background-color:#e91e63">
                             <h4><i class="fas fa-chart-bar"></i> ประวัติการโหวต</h4>
                         </div>
-                        <table class="table" id="table_id">
+                        <table class="table table-responsive" id="table_id">
                             <thead>
                                 <tr>
                                     <th>ชื่อ-สกุล</th>

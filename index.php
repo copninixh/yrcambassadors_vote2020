@@ -54,32 +54,35 @@ body{
                     require_once 'component/navbar.php';
                 ?>
                 <div class="col-xl-12 mb-5 wow slideInUp" style="margin-top:130px;">
-                        <div class="container-fluid mb-0" style="backdrop-filter: blur(24px);background:rgba(255, 255, 255, 0.8);border-radius:10px 10px 0px 0px;">
-                            <h3 class="pt-2 pb-2" align="left" style="font-weight:500;font-size:18px;color:#464646">
-                            <i class="fa fa-vote-yea"></i>
-                                YRC Vote Ambassadors 2020
+                        <div class="container-fluid mb-0" style="backdrop-filter: blur(24px);background:#e91e63;border-radius:10px 10px 0px 0px;">
+                            <h3 class="pt-2 pb-2" align="center" style="font-weight:500;font-size:18px;color:white">
+                            
+                            ระบบโหวตทูตกิจกรรม
                             </h3>
                         </div>
-                        <div class="container-fluid pl-xl-5 pr-xl-5 "  style="backdrop-filter: blur(24px);background:rgba(255, 255, 255, 0.7);border-radius:0px 0px 10px 10px;margin-top:-10px;">
+                        <div class="container-fluid pl-xl-5 pr-xl-5 "  style="backdrop-filter: blur(24px);background:rgba(255, 255, 255, 1);border-radius:0px 0px 10px 10px;margin-top:-10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)">
                             <p align="center"><img class="pt-4 img-fluid d-none d-xl-block" src="assets/img/logo.png" width="25%"></p>
                             <p align="center"><img class="pt-4 img-fluid d-xl-none" src="assets/img/logo.png" width="45%"></p>
-                            <h2 class="" align="center" style="font-weight:600;color:#e91e63">ระบบโหวตทูตกิจกรรม</h2>
-                            <h4 align="center">โรงเรียนยุพราชวิทยาลัย จังหวัดเชียงใหม่</h4>
+                            <h2 class="" align="center" style="font-weight:600;color:#e91e63"><i class="fa fa-vote-yea"></i>&nbsp;YRC Vote Ambassadors 2020</h2>
+                            <h4 align="center">Yupparaj Wittayalai School</h4>
+                            
 
+
+                            <div class="col-xl-12 py-4 pl-xl-5 pr-xl-5">
                             <?php
                                 if(isset($_GET['status'])){
                                     $status = $_GET['status'];
                             ?>
                                 <?php if($status == 'error'){ ?>
                                     <div class="alert alert-danger" style="border-radius: 5px;">
-                                        <div class="container">
+                                        <div class="container text-center">
                                             <b></b> เลขประจำตัวประชาชน หรือ รหัสผ่าน ไม่ถูกต้อง !
                                         </div>
                                     </div>
                                 <?php } ?>
                             <?php } ?>
-                            <div class="col-xl-12 py-4 pl-xl-5 pr-xl-5">
-                                <form method="post" action="process/loginact.php">
+                            <hr>
+                                <form method="post" action="process/loginact.php" styl>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1" style="color: #464646">เลขประจำตัวประชาชน</label>
                                         <input type="name" class="form-control" placeholder="เลขประจำตัวประชาชน" name="s_username"  required>
@@ -92,7 +95,7 @@ body{
                                 </form>
                                 <p align="center"><a href="result_yrcambassador.php">รายงานผลโหวต</a></p>
                                 <hr>
-                                <p align="center" style="color: #929292">©<?php echo date("Y") ?> All Right Reserved Kampanart.Ch , Ratchanon.Mo , Kru Viratchai.Ju | Youth Computer YRC</p>
+                                <p align="center" style="color: #929292">©<?php echo date("Y") ?> All Right Reserved Kampanart.Ch , Ratchanon.Mo , Kru Viratchai.Ju | Web & Server developer Youth Computer YRC</p>
                             </div> 
                         </div>
                 </div>
