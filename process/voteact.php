@@ -1,7 +1,7 @@
 <?php
     session_start();
     include("../connect/connect.php");
-    if(isset($_POST['insert'])){
+    if(isset($_POST['submit'])){
         $c_number = $_POST['c_number'];
         $s_id = $_POST['s_id'];
         $s_level = $_POST['s_level'];

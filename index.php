@@ -8,7 +8,7 @@ body{
     font-family: 'Kanit' ,sans-serif;
     background-image:url('assets/img/bg.jpg');
     background-size:fixed;
-    background-atta
+    
 }
 .img{
 	display: flex;
@@ -57,7 +57,7 @@ body{
                         <div class="container-fluid mb-0" style="backdrop-filter: blur(24px);background:#e91e63;border-radius:10px 10px 0px 0px;">
                             <h3 class="pt-2 pb-2" align="center" style="font-weight:500;font-size:18px;color:white">
                             
-                            ระบบโหวตทูตกิจกรรม
+                            ระบบโหวตทูตกิจกรรมฯ
                             </h3>
                         </div>
                         <div class="container-fluid pl-xl-5 pr-xl-5 "  style="backdrop-filter: blur(24px);background:rgba(255, 255, 255, 1);border-radius:0px 0px 10px 10px;margin-top:-10px;box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2)">

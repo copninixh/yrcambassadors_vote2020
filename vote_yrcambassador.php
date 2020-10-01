@@ -70,31 +70,16 @@
             <?php }else{ ?>
                 <div class="col-xl-8 col-lg-7 mt-5 mb-5 ">
                 <div class="col-md-12 bg-white py-4" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);border-bottom: 5px solid #e91e63;border-radius:5px">
-                    <!--div class="w-100 text-light text-center" style="background-color:#e91e63;border-radius:10px 10px 0px 0px">
-                        <h4>วีดิโอแนะนำผู้เข้าประกวดทูตกิจกรรม YRC Ambassadors 2020</h4>
-                    </div>
-                    <div class="row">
                    
-                        <div class="col-xl-6 mb-3">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FYupparaj.Committee%2Fvideos%2F2778974285705403%2F&show_text=0"   style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 mb-3">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src=""   style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                            </div>
-                        </div>
-                 
-                 
-                    </div-->
                    
                        
                     <div class="w-100 text-light text-center" style="background-color:#e91e63;border-radius:10px 10px 0px 0px">
                         <h4>รายละเอียดทูตกิจกรรม YRC Ambassadors 2020</h4>
                     </div>
+                   
+                                            
                     <div class="row">
+                    
                     <?php
                         $sql = "SELECT * FROM candidate ORDER BY c_id ASC";
                         $result = mysqli_query($conn,$sql);
@@ -113,13 +98,40 @@
                                         <input type="name" class="form-control" value="<?php echo $_SESSION['s_level']; ?>" name="s_level" required readonly>
                                         <input type="name" class="form-control" value="<?php echo $_SESSION['s_id']; ?>" name="s_id" required readonly>
                                     </div>
-                                    <button onClick="javascript: return confirm('ยืนยันการโหวต เบอร์ <?php echo $row['c_number']; ?> (<?php echo $row['c_name']; ?>) ใช่หรือไม่?');" name="insert" class="btn btn-primary w-100 btn-sm" style="font-size: 15px;"><i class="fas fa-check-square"></i> โหวตคนนี้</button>
-                                
+                                    
+                                    <button type="button" class="btn btn-primary w-100 btn-sm" data-toggle="modal" data-target="#exampleModal<?php echo $row['c_number'] ?>" style="font-size: 15px;"><i class="fas fa-check-square"></i> โหวตคนนี้</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal<?php echo $row['c_number'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title text-center text-rose" id="exampleModalLabel" ><i class="fas fa-vote-yea"></i> ยืนยันการโหวต หมายเลข <?php echo $row['c_number']; ?> ใช่หรือไม่?</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="uploads/<?php echo $row['c_pic']; ?>" class="img-fluid">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="font-size: 15px;"><i class="fas fa-times"></i> ยกเลิก</button>
+                                            &nbsp;
+                                            <button type="submit" class="btn btn-success" name="submit" style="font-size: 15px;"><i class="fas fa-vote-yea"></i> โหวต</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
                                 </form>    
                             </div>  
                         </div>
                         
                     <?php } ?>
+
+                    <!-- Button trigger modal -->
+
+
+
 
                        
                       

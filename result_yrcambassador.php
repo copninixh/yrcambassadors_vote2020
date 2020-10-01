@@ -26,7 +26,7 @@ body{
                     <div class="container">
                         <h3 class="text-rose"><i class="fas fa-chart-bar"></i> YRC Ambassadors 2020 </h3>
                         <h4 class="text-primary">รายงานผลการเลือกโหวตเลือกทูตกิจกรรมฯ</h4>
-                        <a href="index.php" class="btn btn-primary btn-sm w-50">กลับหน้าหลัก</a>
+                            <a href="index.php" class="btn btn-primary btn-sm w-50">กลับหน้าหลัก</a>
 
                         <hr>
 

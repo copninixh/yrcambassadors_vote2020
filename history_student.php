@@ -6,7 +6,7 @@
         header("location:index.php?status=error");
     }else{
         if($_SESSION['s_status'] == 'U'){
-            header("location:evotecolor63.php");
+            header("location:vote_yrcambassador.php");
         }else{
 ?>
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ body{
                         <div class="bg-rose text-light text-center mt-3 mb-3" style="padding: 5px;background-color:#e91e63">
                             <h4><i class="fas fa-chart-bar"></i> ประวัติการโหวต</h4>
                         </div>
-                        <table class="table table-responsive" id="table_id">
+                        <table class="table" id="table_id">
                             <thead>
                                 <tr>
                                     <th>ชื่อ-สกุล</th>
@@ -53,7 +53,7 @@ body{
                                 </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            
                         <?php
                             $sql = "SELECT * FROM vote ORDER BY v_id ASC";
                             $query = mysqli_query($conn,$sql);
@@ -62,7 +62,7 @@ body{
                             
                         ?>
                             
-
+                            <tr>
                         <?php 
                             $sqlreadstu = "SELECT * FROM student WHERE s_id = '$row[s_id]'";
                             $querystu = mysqli_query($conn,$sqlreadstu);
@@ -81,9 +81,9 @@ body{
                                     
                                 
                                
-                            
+                            </tr>
                         <?php }?>
-                        </tr>
+                        
                         </tbody>
                         </table>
                         

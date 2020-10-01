@@ -6,7 +6,7 @@
         header("location:index.php?status=error");
     }else{
         if($_SESSION['s_status'] == 'U'){
-            header("location:evotecolor63.php");
+            header("location:vote_yrcambassador.php");
         }else{
 
 ?>
